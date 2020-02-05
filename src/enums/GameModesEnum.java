@@ -1,0 +1,6 @@
+package enums;
+
+public enum GameModesEnum {
+    RANDOM_MAP, DEATH_MATCH, REGICIDE, TOWER_DEFENSE, KING_OF_THE_HILL, SUDDEN_DEATH, SCENARIO
+
+}
