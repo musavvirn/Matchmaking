@@ -7,24 +7,23 @@ import org.junit.Test;
 
 public class QueueTest {
 
-    Queue q = new Queue();
+    Queue Q = new Queue();
 
     @Test
-    public void testActivate() {
-        q.setState(QueueStateEnum.INACTIVE);
-        Assert.assertTrue(q.activate());
-        Assert.assertTrue(q.activate());
-        q.setState(QueueStateEnum.EMPTY);
-        Assert.assertFalse(q.activate());
+    public void test_Activate() {
+        Q.setState(QueueStateEnum.INACTIVE);
+        Assert.assertTrue(Q.activate());
+        Q.setState(QueueStateEnum.EMPTY);
+        Assert.assertFalse(Q.activate());
     }
 
     @Test
-    public void testDeactivate() {
-        q.setState(QueueStateEnum.INACTIVE);
-        Assert.assertFalse(q.deactivate());
-        q.activate();
-        Assert.assertTrue(q.deactivate());
-        Assert.assertFalse(q.deactivate());
+    public void test_Deactivate() {
+        Q.setState(QueueStateEnum.INACTIVE);
+        Assert.assertFalse(Q.deactivate());
+        Q.activate();
+        Assert.assertTrue(Q.deactivate());
+        Assert.assertFalse(Q.deactivate());
     }
 
 
